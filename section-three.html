@@ -1,0 +1,245 @@
+<!DOCTYPE html> <!-- Defines this as an HTML5 document -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+  <meta charset="UTF-8"/> <!-- Ensures correct character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes the layout responsive on all devices -->
+  <title>Section Three</title> <!-- Page title shown in the browser tab -->
+
+  <style>
+    /* ---------------------------------------------------
+       PAGE & NAVIGATION STYLES
+    --------------------------------------------------- */
+
+    /* Basic page structure and default styles */
+    body {
+      font-family: Arial, sans-serif; /* Sets a clean and simple font */
+      display: flex; /* Enables flexbox layout for easy vertical stacking */
+      align-items: center; /* Centers content horizontally */
+      flex-direction: column; /* Stacks sections vertically */
+      margin: 0; /* Removes default browser margin */
+      background: #fafafa; /* Light background for contrast */
+    }
+
+    /* Navigation bar styling */
+    nav {
+      width: 100%; /* Makes navigation span the full page width */
+      background: brown; /* Brown background matches the farm theme */
+      padding: 10px 0; /* Adds padding above and below navigation links */
+    }
+
+    /* Removes list styling and arranges navigation links in a row */
+    nav ul {
+      list-style: none; /* Removes bullet points */
+      display: flex; /* Displays nav items in a horizontal line */
+      justify-content: center; /* Centers the navigation items */
+      margin: 0; /* Removes browser default margin */
+      padding: 0; /* Removes default padding */
+    }
+
+    /* Adds spacing between navigation links */
+    nav li {
+      margin: 0 15px; /* Adds 15px space on both sides of each link */
+    }
+
+    /* Styles each clickable navigation link */
+    nav a {
+      color: #fff; /* White text color for contrast against brown background */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Makes link text bold for readability */
+    }
+
+    /* Adds hover effect for visual feedback */
+    nav a:hover {
+      text-decoration: underline; /* Adds underline when hovered */
+    }
+
+    /* ---------------------------------------------------
+       LAYOUT THREE SECTION
+    --------------------------------------------------- */
+
+    /* Layout container with four equal boxes (each holding image + text) */
+    .layout-three {
+      display: flex; /* Places boxes in a row */
+      align-items: flex-start; /* Aligns boxes to the top */
+      justify-content: space-evenly; /* Evenly spaces all four boxes */
+      width: 80%; /* Section takes up 80% of the page width */
+      border: 1px solid #ccc; /* Adds a light grey border */
+      padding: 20px; /* Adds inner spacing */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around section */
+      border-radius: 10px; /* Smoothly rounds the corners */
+      margin: 30px 0 40px; /* Adds spacing above and below the section */
+      background: #fff; /* White background for clarity */
+    }
+
+    /* Each individual container (one for each animal) */
+    .layout-three-item {
+      width: 20%; /* Each item takes up about one-quarter of the width */
+      text-align: center; /* Centers image and text within each box */
+    }
+
+    /* Image styling inside each item */
+    .layout-three-item img {
+      width: 100%; /* Image fills its container */
+      border-radius: 10px; /* Adds rounded corners for a friendly look */
+    }
+
+    /* Subheading for each animal (brown to match theme) */
+    .layout-three-item h3 {
+      color: brown; /* Brown text for consistency */
+    }
+
+    /* Paragraph description below each image */
+    .layout-three-item p {
+      margin-top: 10px; /* Adds space between image/title and text */
+      line-height: 1.4; /* Improves readability */
+    }
+
+    /* ---------------------------------------------------
+       CODE DISPLAY BOXES (HTML + CSS)
+    --------------------------------------------------- */
+
+    /* Container holding both HTML and CSS code examples */
+    .code-container {
+      display: flex; /* Places both boxes side by side */
+      justify-content: center; /* Centers boxes horizontally */
+      align-items: flex-start; /* Aligns boxes to top */
+      width: 90%; /* Slightly narrower than layout section */
+      gap: 40px; /* Space between the two boxes */
+      margin-bottom: 50px; /* Adds space below section */
+    }
+
+    /* Each individual code box (HTML or CSS) */
+    .code-box {
+      background: #fff; /* White background for contrast */
+      border: 1px solid #ccc; /* Light grey border */
+      border-radius: 10px; /* Rounded corners for a smooth finish */
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+      width: 45%; /* Each box takes about half of container width */
+      padding: 20px; /* Adds inner spacing */
+    }
+
+    /* Code box headings */
+    .code-box h3 {
+      text-align: center; /* Centers heading text */
+      color: brown; /* Consistent theme color */
+    }
+
+    /* Code content styling */
+    pre {
+      background: #f4f4f4; /* Light grey background for readability */
+      padding: 10px; /* Adds space around the code */
+      border-radius: 6px; /* Rounds the code box corners */
+      white-space: pre-wrap; /* Allows code to wrap if too long */
+      word-wrap: break-word; /* Prevents overflow */
+      font-size: 14px; /* Slightly smaller text for code */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="shop.html">Shop Example</a></li>
+      <li><a href="section-one.html">Layout One</a></li>
+      <li><a href="section-two.html">Layout Two</a></li>
+      <li><a href="section-three.html">Layout Three</a></li>
+      <li><a href="section-four.html">Layout Four</a></li>
+      <li><a href="section-five.html">Layout Five</a></li>
+      <li><a href="section-six.html">Layout Six</a></li>
+    </ul>
+  </nav>
+
+  <h2>Layout Three</h2> <!-- Page heading -->
+
+  <!-- Section with four equal containers (image + text) -->
+  <section class="layout-three">
+    <div class="layout-three-item"> <!-- Box 1 -->
+      <img src="images/farm-header.jpg" alt="Farm Image"/> <!-- Image -->
+      <h3>Happy Cows</h3> <!-- Subheading -->
+      <p>Meet our friendly cows grazing in the fields.</p> <!-- Description -->
+    </div>
+
+    <div class="layout-three-item"> <!-- Box 2 -->
+      <img src="images/farm-header.jpg" alt="Farm Image"/> <!-- Image -->
+      <h3>Playful Goats</h3> <!-- Subheading -->
+      <p>Watch our playful goats climb and explore.</p> <!-- Description -->
+    </div>
+
+    <div class="layout-three-item"> <!-- Box 3 -->
+      <img src="images/farm-header.jpg" alt="Farm Image"/> <!-- Image -->
+      <h3>Curious Pigs</h3> <!-- Subheading -->
+      <p>Say hello to our curious and clever pigs.</p> <!-- Description -->
+    </div>
+
+    <div class="layout-three-item"> <!-- Box 4 -->
+      <img src="images/farm-header.jpg" alt="Farm Image"/> <!-- Image -->
+      <h3>Fluffy Sheep</h3> <!-- Subheading -->
+      <p>Meet our soft, woolly sheep in the paddock.</p> <!-- Description -->
+    </div>
+  </section>
+
+  <!-- Code demonstration boxes -->
+  <div class="code-container">
+    <div class="code-box">
+      <h3>HTML Code</h3>
+      <pre><code>
+&lt;section class="layout-three"&gt;
+  &lt;div class="layout-three-item"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Farm Image"&gt;
+    &lt;h3&gt;Happy Cows&lt;/h3&gt;
+    &lt;p&gt;Meet our friendly cows grazing in the fields.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="layout-three-item"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Farm Image"&gt;
+    &lt;h3&gt;Playful Goats&lt;/h3&gt;
+    &lt;p&gt;Watch our playful goats climb and explore.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="layout-three-item"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Farm Image"&gt;
+    &lt;h3&gt;Curious Pigs&lt;/h3&gt;
+    &lt;p&gt;Say hello to our curious and clever pigs.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="layout-three-item"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Farm Image"&gt;
+    &lt;h3&gt;Fluffy Sheep&lt;/h3&gt;
+    &lt;p&gt;Meet our soft, woolly sheep in the paddock.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+      </code></pre>
+    </div>
+
+    <div class="code-box">
+      <h3>CSS Code</h3>
+      <pre><code>
+.layout-three {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.layout-three-item {
+  width: 20%;
+  text-align: center;
+}
+.layout-three-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+.layout-three-item h3 {
+  color: brown;
+}
+.layout-three-item p {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+      </code></pre>
+    </div>
+  </div>
+</body>
+</html>

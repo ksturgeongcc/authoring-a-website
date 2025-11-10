@@ -1,0 +1,222 @@
+<!DOCTYPE html> <!-- Defines this as an HTML5 document -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+  <meta charset="UTF-8"/> <!-- Ensures correct character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes the layout responsive on mobile devices -->
+  <title>Section Two</title> <!-- Page title shown in browser tab -->
+
+  <style>
+    /* ---------------------------------------------------
+       PAGE & NAVIGATION STYLES
+    --------------------------------------------------- */
+
+    /* Basic page structure and layout */
+    body {
+      font-family: Arial, sans-serif; /* Uses a clean, readable font */
+      display: flex; /* Enables flexbox layout for easy vertical stacking */
+      align-items: center; /* Centers everything horizontally */
+      flex-direction: column; /* Stacks elements vertically */
+      margin: 0; /* Removes browser’s default margin */
+      background: #fafafa; /* Light grey background for subtle contrast */
+    }
+
+    /* Navigation bar styling */
+    nav {
+      width: 100%; /* Makes navigation span full width of the page */
+      background: brown; /* Farm-themed brown background */
+      padding: 10px 0; /* Adds vertical space around the links */
+    }
+
+    /* Styles the unordered list in the nav (removes bullets and aligns links) */
+    nav ul {
+      list-style: none; /* Removes default bullet points */
+      display: flex; /* Displays links in a row */
+      justify-content: center; /* Centers all nav items horizontally */
+      margin: 0; /* Removes default margin */
+      padding: 0; /* Removes default padding */
+    }
+
+    /* Adds space between each list item */
+    nav li {
+      margin: 0 15px; /* 15px spacing on left and right of each link */
+    }
+
+    /* Styles the clickable links */
+    nav a {
+      color: #fff; /* White text for contrast on brown background */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Makes link text bold */
+    }
+
+    /* Adds visual feedback when hovering over a link */
+    nav a:hover {
+      text-decoration: underline; /* Underline appears on hover */
+    }
+
+    /* ---------------------------------------------------
+       LAYOUT TWO SECTION
+    --------------------------------------------------- */
+
+    /* Main section container with two images and text in the middle */
+    .layout-two {
+      display: flex; /* Places items (images + text) in a horizontal row */
+      align-items: center; /* Centers them vertically */
+      width: 80%; /* Takes up 80% of the available width */
+      justify-content: space-evenly; /* Evenly spaces all items */
+      border: 1px solid #ccc; /* Adds a thin light grey border */
+      padding: 20px; /* Adds inner spacing */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Adds soft shadow for depth */
+      border-radius: 10px; /* Rounds the corners of the section */
+      margin: 30px 0 40px; /* Adds space above and below section */
+      text-align: center; /* Centers all text inside section */
+      background: #fff; /* White background to separate it from page */
+    }
+
+    /* Container for the left and right images */
+    .layout-two-img {
+      width: 25%; /* Each image takes up one-quarter of the width */
+    }
+
+    /* Makes images responsive and visually consistent */
+    .layout-two-img img {
+      width: 100%; /* Image fills its container */
+      border-radius: 10px; /* Rounds the corners of each image */
+    }
+
+    /* Middle text area between the two images */
+    .layout-two .text {
+      width: 40%; /* Text area takes up remaining space */
+    }
+
+    /* Section heading */
+    .layout-two .text h2 {
+      color: brown; /* Matches the farm park color theme */
+    }
+
+    /* Paragraph styling */
+    .layout-two .text p {
+      line-height: 1.6; /* Adds spacing between lines for readability */
+    }
+
+    /* ---------------------------------------------------
+       CODE DISPLAY BOXES (HTML + CSS)
+    --------------------------------------------------- */
+
+    /* Container that holds both code boxes side by side */
+    .code-container {
+      display: flex; /* Places the boxes in a row */
+      justify-content: center; /* Centers boxes horizontally */
+      align-items: flex-start; /* Aligns boxes to the top edge */
+      width: 90%; /* Slightly narrower than the section */
+      gap: 40px; /* Adds space between boxes */
+      margin-bottom: 50px; /* Adds space below section */
+    }
+
+    /* Each individual code box */
+    .code-box {
+      background: #fff; /* White background for readability */
+      border: 1px solid #ccc; /* Light grey border */
+      border-radius: 10px; /* Rounded corners for a clean look */
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+      width: 45%; /* Each box takes up about half of the container */
+      padding: 20px; /* Space inside each box */
+    }
+
+    /* Code box heading text */
+    .code-box h3 {
+      text-align: center; /* Centers the heading text */
+      color: brown; /* Matches site color theme */
+    }
+
+    /* Styles for the code content itself */
+    pre {
+      background: #f4f4f4; /* Light grey background for contrast */
+      padding: 10px; /* Adds space inside the code box */
+      border-radius: 6px; /* Rounds corners of the background box */
+      white-space: pre-wrap; /* Allows long lines to wrap neatly */
+      word-wrap: break-word; /* Prevents long code from overflowing */
+      font-size: 14px; /* Slightly smaller font size for code readability */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="shop.html">Shop Example</a></li>
+      <li><a href="section-one.html">Layout One</a></li>
+      <li><a href="section-two.html">Layout Two</a></li>
+      <li><a href="section-three.html">Layout Three</a></li>
+      <li><a href="section-four.html">Layout Four</a></li>
+      <li><a href="section-five.html">Layout Five</a></li>
+      <li><a href="section-six.html">Layout Six</a></li>
+    </ul>
+  </nav>
+
+  <h2>Layout Two</h2> <!-- Page heading -->
+
+  <!-- Layout Two section: image, text, image -->
+  <section class="layout-two">
+    <div class="layout-two-img"> <!-- Left image container -->
+      <img src="images/farm-header.jpg" alt="Left Image"/> <!-- Left image -->
+    </div>
+
+    <div class="text"> <!-- Text container in the middle -->
+      <h2>Discover Life on the Farm</h2> <!-- Section heading -->
+      <p>
+        Experience the beauty and excitement of the countryside. 
+        Watch our animals as they play, explore, and enjoy their day-to-day routines.
+      </p>
+    </div>
+
+    <div class="layout-two-img"> <!-- Right image container -->
+      <img src="images/farm-header.jpg" alt="Right Image"/> <!-- Right image -->
+    </div>
+  </section>
+
+  <!-- Code demonstration boxes -->
+  <div class="code-container">
+    <div class="code-box">
+      <h3>HTML Code</h3>
+      <pre><code>
+&lt;section class="layout-two"&gt;
+  &lt;div class="layout-two-img"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Left Image"&gt;
+  &lt;/div&gt;
+  &lt;div class="text"&gt;
+    &lt;h2&gt;Discover Life on the Farm&lt;/h2&gt;
+    &lt;p&gt;Experience the beauty and excitement...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="layout-two-img"&gt;
+    &lt;img src="images/farm-header.jpg" alt="Right Image"&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+      </code></pre>
+    </div>
+
+    <div class="code-box">
+      <h3>CSS Code</h3>
+      <pre><code>
+.layout-two {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-evenly;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+.layout-two-img { width: 25%; }
+.layout-two-img img { width: 100%; border-radius: 10px; }
+.layout-two .text { width: 40%; }
+.layout-two .text h2 { color: brown; }
+.layout-two .text p { line-height: 1.6; }
+      </code></pre>
+    </div>
+  </div>
+</body>
+</html>

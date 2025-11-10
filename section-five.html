@@ -1,0 +1,287 @@
+<!DOCTYPE html> <!-- Defines this as an HTML5 document -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+  <meta charset="UTF-8"/> <!-- Ensures correct character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes the layout responsive on all screen sizes -->
+  <title>Section Five</title> <!-- Title shown in the browser tab -->
+
+  <style>
+    /* ---------------------------------------------------
+       PAGE & NAVIGATION STYLES
+    --------------------------------------------------- */
+
+    /* Basic body setup */
+    body {
+      font-family: Arial, sans-serif; /* Sets a simple, readable font */
+      display: flex; /* Enables flexbox layout */
+      align-items: center; /* Centers content horizontally */
+      flex-direction: column; /* Stacks elements vertically */
+      margin: 0; /* Removes browser default margin */
+      background: #fafafa; /* Soft off-white background for contrast */
+    }
+
+    /* Navigation bar styling */
+    nav {
+      width: 100%; /* Spans full page width */
+      background: brown; /* Brown background color fits farm theme */
+      padding: 10px 0; /* Adds padding above and below links */
+    }
+
+    /* Unordered list for navigation links */
+    nav ul {
+      list-style: none; /* Removes default bullets */
+      display: flex; /* Displays items in a row */
+      justify-content: center; /* Centers navigation horizontally */
+      margin: 0; /* Removes browser default margin */
+      padding: 0; /* Removes browser default padding */
+    }
+
+    /* Spacing between navigation links */
+    nav li {
+      margin: 0 15px; /* 15px space on either side of each link */
+    }
+
+    /* Link styling */
+    nav a {
+      color: #fff; /* White text color for readability */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Makes text bold for emphasis */
+    }
+
+    /* Hover effect for interactivity */
+    nav a:hover {
+      text-decoration: underline; /* Adds underline when hovered */
+    }
+
+    /* ---------------------------------------------------
+       LAYOUT FIVE SECTION
+    --------------------------------------------------- */
+
+    /* Main container for layout five */
+    .layout-five {
+      display: flex; /* Positions columns side by side */
+      align-items: stretch; /* Makes both columns equal height */
+      justify-content: space-evenly; /* Evenly spaces the two columns */
+      width: 80%; /* Section takes up 80% of the page width */
+      border: 1px solid #ccc; /* Light border around section */
+      padding: 20px; /* Inner spacing */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around section */
+      border-radius: 10px; /* Rounds the corners */
+      margin: 30px 0 40px; /* Adds space above and below section */
+      background: #fff; /* White background for clarity */
+    }
+
+    /* Left column: large feature */
+    .layout-five .feature-large {
+      width: 55%; /* Takes up over half of the section width */
+      display: flex; /* Enables vertical stacking inside */
+      flex-direction: column; /* Stacks image, title, and text vertically */
+    }
+
+    /* Image inside the large feature */
+    .layout-five .feature-large .img-wrap img {
+      width: 100%; /* Image fills full width of its container */
+      border-radius: 10px; /* Rounded corners for consistency */
+    }
+
+    /* Large feature heading */
+    .layout-five .feature-large h3 {
+      color: brown; /* Brown text color for theme consistency */
+      margin-top: 10px; /* Adds space above heading */
+      margin-bottom: 6px; /* Adds space below heading */
+    }
+
+    /* Paragraph under large feature */
+    .layout-five .feature-large p {
+      line-height: 1.6; /* Adds spacing between lines for readability */
+    }
+
+    /* Right column: stacked smaller features */
+    .layout-five .feature-stack {
+      width: 35%; /* Takes up remaining width */
+      display: flex; /* Enables vertical stacking */
+      flex-direction: column; /* Stacks each mini feature vertically */
+    }
+
+    /* Each small stacked feature */
+    .layout-five .stack-item {
+      display: flex; /* Stacks content inside each mini feature */
+      flex-direction: column; /* Ensures image above text */
+      margin-bottom: 14px; /* Adds spacing between items */
+    }
+
+    /* Removes extra space after last stacked item */
+    .layout-five .stack-item:last-child {
+      margin-bottom: 0; /* No space after last feature */
+    }
+
+    /* Image inside each stacked feature */
+    .layout-five .stack-item .img-wrap img {
+      width: 100%; /* Image fills container width */
+      border-radius: 10px; /* Rounded corners */
+    }
+
+    /* Subheadings for small features */
+    .layout-five .stack-item h4 {
+      color: brown; /* Brown color for theme consistency */
+      margin-top: 8px; /* Space above heading */
+      margin-bottom: 4px; /* Space below heading */
+    }
+
+    /* Paragraphs in stacked features */
+    .layout-five .stack-item p {
+      line-height: 1.4; /* Slightly tighter spacing for smaller text blocks */
+    }
+
+    /* ---------------------------------------------------
+       CODE DISPLAY BOXES (HTML + CSS)
+    --------------------------------------------------- */
+
+    /* Container for code examples */
+    .code-container {
+      display: flex; /* Displays code boxes side by side */
+      justify-content: center; /* Centers them horizontally */
+      align-items: flex-start; /* Aligns them to the top */
+      width: 90%; /* Slightly narrower than main layout */
+      gap: 40px; /* Adds space between the boxes */
+      margin-bottom: 50px; /* Adds spacing below section */
+    }
+
+    /* Each individual code box */
+    .code-box {
+      background: #fff; /* White background for readability */
+      border: 1px solid #ccc; /* Light grey border */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      width: 45%; /* Each box takes about half the container */
+      padding: 20px; /* Inner padding */
+    }
+
+    /* Code box headings */
+    .code-box h3 {
+      text-align: center; /* Centers heading text */
+      color: brown; /* Brown for consistent color theme */
+    }
+
+    /* Code content styling */
+    pre {
+      background: #f4f4f4; /* Light grey background for contrast */
+      padding: 10px; /* Inner spacing */
+      border-radius: 6px; /* Rounded corners */
+      white-space: pre-wrap; /* Allows code to wrap if too long */
+      word-wrap: break-word; /* Prevents code overflow */
+      font-size: 14px; /* Slightly smaller font for code text */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="shop.html">Shop Example</a></li>
+      <li><a href="section-one.html">Layout One</a></li>
+      <li><a href="section-two.html">Layout Two</a></li>
+      <li><a href="section-three.html">Layout Three</a></li>
+      <li><a href="section-four.html">Layout Four</a></li>
+      <li><a href="section-five.html">Layout Five</a></li>
+      <li><a href="section-six.html">Layout Six</a></li>
+    </ul>
+  </nav>
+
+  <h2>Layout Five</h2> <!-- Page heading -->
+
+  <!-- Layout Five: Large feature on left, two smaller stacked features on right -->
+  <section class="layout-five">
+    <div class="feature-large"> <!-- Large main feature -->
+      <div class="img-wrap">
+        <img src="images/farm-header.jpg" alt="Main farm feature"/> <!-- Main image -->
+      </div>
+      <h3>Big Day on the Farm</h3> <!-- Heading -->
+      <p>
+        Step into our busiest spots—see the morning rounds, greet the animals, 
+        and follow the action across the paddocks.
+      </p> <!-- Description -->
+    </div>
+
+    <div class="feature-stack"> <!-- Right column with stacked mini features -->
+      <div class="stack-item"> <!-- Top mini feature -->
+        <div class="img-wrap">
+          <img src="images/farm-header.jpg" alt="Mini feature one"/> <!-- Image -->
+        </div>
+        <h4>Keeper Talks</h4> <!-- Subheading -->
+        <p>Short, friendly chats where you can ask questions and learn fun facts.</p> <!-- Text -->
+      </div>
+
+      <div class="stack-item"> <!-- Bottom mini feature -->
+        <div class="img-wrap">
+          <img src="images/farm-header.jpg" alt="Mini feature two"/> <!-- Image -->
+        </div>
+        <h4>Hands-On Moments</h4> <!-- Subheading -->
+        <p>Gentle, guided interactions—perfect for little animal lovers.</p> <!-- Text -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Code demonstration boxes -->
+  <div class="code-container">
+    <div class="code-box">
+      <h3>HTML Code</h3>
+      <pre><code>
+&lt;section class="layout-five"&gt;
+  &lt;div class="feature-large"&gt;
+    &lt;div class="img-wrap"&gt;
+      &lt;img src="images/farm-header.jpg" alt="Main farm feature"&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Big Day on the Farm&lt;/h3&gt;
+    &lt;p&gt;Step into our busiest spots...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="feature-stack"&gt;
+    &lt;div class="stack-item"&gt;
+      &lt;div class="img-wrap"&gt;
+        &lt;img src="images/farm-header.jpg" alt="Mini feature one"&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Keeper Talks&lt;/h4&gt;
+      &lt;p&gt;Short, friendly chats...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="stack-item"&gt;
+      &lt;div class="img-wrap"&gt;
+        &lt;img src="images/farm-header.jpg" alt="Mini feature two"&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Hands-On Moments&lt;/h4&gt;
+      &lt;p&gt;Gentle, guided interactions...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+      </code></pre>
+    </div>
+
+    <div class="code-box">
+      <h3>CSS Code</h3>
+      <pre><code>
+.layout-five {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.layout-five .feature-large { width: 55%; display: flex; flex-direction: column; }
+.layout-five .feature-large .img-wrap img { width: 100%; border-radius: 10px; }
+.layout-five .feature-large h3 { color: brown; margin-top: 10px; margin-bottom: 6px; }
+.layout-five .feature-large p { line-height: 1.6; }
+.layout-five .feature-stack { width: 35%; display: flex; flex-direction: column; }
+.layout-five .stack-item { display: flex; flex-direction: column; margin-bottom: 14px; }
+.layout-five .stack-item:last-child { margin-bottom: 0; }
+.layout-five .stack-item .img-wrap img { width: 100%; border-radius: 10px; }
+.layout-five .stack-item h4 { color: brown; margin-top: 8px; margin-bottom: 4px; }
+.layout-five .stack-item p { line-height: 1.4; }
+      </code></pre>
+    </div>
+  </div>
+</body>
+</html>

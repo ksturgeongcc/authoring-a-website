@@ -1,0 +1,204 @@
+<!DOCTYPE html> <!-- Defines this as an HTML5 document -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Ensures correct character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the layout responsive on mobile -->
+    <title>Section Six</title> <!-- The title that appears in the browser tab -->
+    <style>
+        /* Main page styling */
+        body{
+            font-family: Arial, sans-serif; /* Sets the font for the whole page */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Centers content horizontally */
+            flex-direction: column; /* Stacks sections vertically */
+            margin: 0; /* Removes default browser margins */
+            background-color: #fafafa; /* Soft background to make boxes stand out */
+        }
+
+        /* Navigation bar styling */
+        nav{
+            width: 100%; /* Makes navigation span the full width of the page */
+            background-color: brown; /* Brown background for visual consistency */
+            padding: 10px 0; /* Adds top and bottom spacing */
+        }
+        nav ul{
+            list-style: none; /* Removes bullet points from the list */
+            display: flex; /* Displays navigation links in a row */
+            justify-content: center; /* Centers links horizontally */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+        }
+        nav ul li{
+            margin: 0 15px; /* Adds space between each navigation link */
+        }
+        nav ul li a{
+            color: white; /* White link text for contrast */
+            text-decoration: none; /* Removes underline from links */
+            font-weight: bold; /* Makes link text bold */
+        }
+        nav ul li a:hover{
+            text-decoration: underline; /* Underlines the link when hovered */
+        }
+
+        /* Layout Six section styling */
+        .layout-six{
+            display: flex; /* Places image and text side by side */
+            align-items: center; /* Vertically centers items within the section */
+            justify-content: space-evenly; /* Evenly spaces the two columns */
+            width: 80%; /* Section takes up 80% of the page width */
+            border: solid 1px #ccc; /* Adds a light grey border */
+            padding: 20px; /* Adds space inside the section */
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1); /* Soft shadow around the section */
+            border-radius: 10px; /* Rounds the corners */
+            margin-bottom: 40px; /* Adds space below the section */
+            margin-top: 30px; /* Adds space between navigation and section */
+            background: #fff; /* White background for clarity */
+        }
+
+        /* Image column */
+        .layout-six .img-wrap{
+            width: 35%; /* Image column takes 35% of the section width */
+        }
+        .layout-six .img-wrap img{
+            width: 100%; /* Image fills the column width */
+            border-radius: 10px; /* Rounds image corners */
+        }
+
+        /* Text column */
+        .layout-six .text{
+            width: 45%; /* Text column takes 45% of the section width */
+        }
+        .layout-six .text h2{
+            color: brown; /* Brown heading for visual consistency */
+        }
+        .layout-six .text p{
+            line-height: 1.6; /* Improves readability of paragraph text */
+        }
+
+        /* Simple button styling */
+        .btn{
+            display: inline-block; /* Makes the link behave like a button */
+            padding: 10px 16px; /* Adds space inside the button */
+            border-radius: 8px; /* Rounds button corners */
+            background: brown; /* Brown background color */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Removes underline */
+            margin-top: 10px; /* Space above the button */
+        }
+
+        /* Code comparison area styling */
+        .code-container{
+            display: flex; /* Places HTML and CSS code side by side */
+            justify-content: center; /* Centers them on the page */
+            align-items: flex-start; /* Aligns boxes at the top */
+            width: 90%; /* Slightly narrower than full width */
+            gap: 40px; /* Adds space between the two code boxes */
+            margin-bottom: 50px; /* Space below the code area */
+        }
+        .code-box{
+            background: #fff; /* White background for contrast */
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+            width: 45%; /* Each code box takes up half the space */
+            padding: 20px; /* Padding inside each box */
+        }
+        .code-box h3{
+            text-align: center; /* Centers title text */
+            color: brown; /* Brown to match theme */
+        }
+        pre{
+            background-color: #f4f4f4; /* Light grey background for code */
+            padding: 10px; /* Adds space inside the code block */
+            border-radius: 6px; /* Soft corners */
+            white-space: pre-wrap; /* Allows code to wrap to next line */
+            word-wrap: break-word; /* Prevents horizontal scrolling */
+            font-size: 14px; /* Readable font size */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav> <!-- Navigation container -->
+        <ul> <!-- Unordered list for navigation links -->
+            <li><a href="/">Home</a></li>
+            <li><a href="shop.html">Shop Example</a></li>
+            <li><a href="section-one.html">Layout One</a></li> <!-- Link to Section One -->
+            <li><a href="section-two.html">Layout Two</a></li> <!-- Link to Section Two -->
+            <li><a href="section-three.html">Layout Three</a></li> <!-- Link to Section Three -->
+            <li><a href="section-four.html">Layout Four</a></li> <!-- Link to Section Four -->
+            <li><a href="section-five.html">Layout Five</a></li> <!-- Link to Section Five -->
+            <li><a href="section-six.html">Layout Six</a></li> <!-- Current page -->
+        </ul>
+    </nav>
+
+    <h2>Layout Six</h2> <!-- Heading for the layout -->
+
+    <!-- Layout Six: image on the left, text on the right, with a button -->
+    <section class="layout-six"> <!-- Section container -->
+        <div class="img-wrap"> <!-- Image column -->
+            <img src="images/farm-header.jpg" alt="Farm banner"> <!-- Image -->
+        </div>
+        <div class="text"> <!-- Text column -->
+            <h2>Plan Your Visit</h2> <!-- Section heading -->
+            <p>Make a day of it! Explore the paddocks, enjoy hands-on activities, and relax with fresh
+                country air. We can’t wait to welcome you.</p> <!-- Section description -->
+            <a href="#" class="btn">Learn More</a> <!-- Simple call-to-action button -->
+        </div>
+    </section>
+
+    <!-- Code comparison area -->
+    <div class="code-container"> <!-- Holds both code boxes side by side -->
+        <div class="code-box"> <!-- Left box for HTML -->
+            <h3>HTML Code</h3>
+            <pre><code>
+&lt;section class="layout-six"&gt;
+    &lt;div class="img-wrap"&gt;
+        &lt;img src="images/farm-header.jpg" alt="Farm banner"&gt;
+    &lt;/div&gt;
+    &lt;div class="text"&gt;
+        &lt;h2&gt;Plan Your Visit&lt;/h2&gt;
+        &lt;p&gt;Make a day of it! Explore the paddocks, enjoy hands-on activities, and relax with fresh
+            country air. We can’t wait to welcome you.&lt;/p&gt;
+        &lt;a href="#" class="btn"&gt;Learn More&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+            </code></pre>
+        </div>
+
+        <div class="code-box"> <!-- Right box for CSS -->
+            <h3>CSS Code</h3>
+            <pre><code>
+.layout-six {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    border: solid 1px #ccc;
+    padding: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.layout-six .img-wrap img {
+    width: 100%;
+    border-radius: 10px;
+}
+.layout-six .text h2 {
+    color: brown;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: brown;
+    color: #fff;
+    text-decoration: none;
+}
+            </code></pre>
+        </div>
+    </div>
+
+</body>
+</html>

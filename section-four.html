@@ -1,0 +1,237 @@
+<!DOCTYPE html> <!-- Defines this as an HTML5 document -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head>
+  <meta charset="UTF-8"/> <!-- Ensures correct character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Makes the layout responsive for all screens -->
+  <title>Section Four</title> <!-- Title shown in the browser tab -->
+
+  <style>
+    /* ---------------------------------------------------
+       PAGE & NAVIGATION STYLES
+    --------------------------------------------------- */
+
+    /* Main page styling */
+    body {
+      font-family: Arial, sans-serif; /* Uses a clean, standard font */
+      display: flex; /* Enables flexbox layout */
+      align-items: center; /* Centers everything horizontally */
+      flex-direction: column; /* Stacks elements vertically */
+      margin: 0; /* Removes browser’s default margin */
+      background: #fafafa; /* Light background for contrast */
+    }
+
+    /* Navigation bar styling */
+    nav {
+      width: 100%; /* Makes the nav bar span full width of the page */
+      background: brown; /* Brown background to fit farm theme */
+      padding: 10px 0; /* Adds space above and below links */
+    }
+
+    /* Removes bullets and arranges nav items in a row */
+    nav ul {
+      list-style: none; /* Removes list dots */
+      display: flex; /* Displays items in a row */
+      justify-content: center; /* Centers the nav items */
+      margin: 0; /* Removes default margin */
+      padding: 0; /* Removes default padding */
+    }
+
+    /* Adds space between navigation items */
+    nav li {
+      margin: 0 15px; /* 15px space on either side of each link */
+    }
+
+    /* Styles the navigation links */
+    nav a {
+      color: #fff; /* White text for readability */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Makes links stand out */
+    }
+
+    /* Hover effect for user feedback */
+    nav a:hover {
+      text-decoration: underline; /* Underlines link on hover */
+    }
+
+    /* ---------------------------------------------------
+       LAYOUT FOUR SECTION
+    --------------------------------------------------- */
+
+    /* Section container */
+    .layout-four {
+      display: flex; /* Positions text and images side by side */
+      align-items: center; /* Vertically aligns content */
+      justify-content: space-evenly; /* Evenly spaces the two columns */
+      width: 80%; /* Section takes up 80% of the page width */
+      border: 1px solid #ccc; /* Light border around the section */
+      padding: 20px; /* Adds inner spacing */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Adds soft shadow */
+      border-radius: 10px; /* Smoothly rounds the corners */
+      margin: 30px 0 40px; /* Space above and below the section */
+      background: #fff; /* White background for clarity */
+    }
+
+    /* Left column: text block */
+    .layout-four .text {
+      width: 40%; /* Text takes up about 40% of the section width */
+    }
+
+    /* Section heading style */
+    .layout-four .text h2 {
+      color: brown; /* Matches the site’s brown theme */
+    }
+
+    /* Paragraph styling for readability */
+    .layout-four .text p {
+      line-height: 1.6; /* Adds spacing between lines */
+    }
+
+    /* Right column: image stack */
+    .layout-four .right-images {
+      width: 40%; /* Image column takes 40% of the section width */
+      display: flex; /* Enables vertical stacking */
+      flex-direction: column; /* Stacks images one above the other */
+    }
+
+    /* Adds spacing between the stacked images */
+    .layout-four .right-images .img-wrap {
+      margin-bottom: 12px; /* Adds space below the first image */
+    }
+
+    /* Removes margin from the last image to keep spacing even */
+    .layout-four .right-images .img-wrap:last-child {
+      margin-bottom: 0; /* No space after the final image */
+    }
+
+    /* Image styling */
+    .layout-four .right-images img {
+      width: 100%; /* Image fills the container width */
+      border-radius: 10px; /* Rounded corners for a softer look */
+    }
+
+    /* ---------------------------------------------------
+       CODE DISPLAY BOXES (HTML + CSS)
+    --------------------------------------------------- */
+
+    /* Container that holds both code examples */
+    .code-container {
+      display: flex; /* Displays boxes side by side */
+      justify-content: center; /* Centers boxes horizontally */
+      align-items: flex-start; /* Aligns boxes to the top */
+      width: 90%; /* Slightly narrower than section */
+      gap: 40px; /* Adds space between boxes */
+      margin-bottom: 50px; /* Space below section */
+    }
+
+    /* Individual code box styling */
+    .code-box {
+      background: #fff; /* White background for clarity */
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Adds soft shadow */
+      width: 45%; /* Each box takes up about half the width */
+      padding: 20px; /* Adds padding inside the box */
+    }
+
+    /* Code box headings */
+    .code-box h3 {
+      text-align: center; /* Centers the title */
+      color: brown; /* Brown heading to match theme */
+    }
+
+    /* Code area styling */
+    pre {
+      background: #f4f4f4; /* Light grey background for readability */
+      padding: 10px; /* Adds inner space */
+      border-radius: 6px; /* Rounds the edges */
+      white-space: pre-wrap; /* Allows long lines to wrap */
+      word-wrap: break-word; /* Prevents overflow */
+      font-size: 14px; /* Slightly smaller font size */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="shop.html">Shop Example</a></li>
+      <li><a href="section-one.html">Layout One</a></li>
+      <li><a href="section-two.html">Layout Two</a></li>
+      <li><a href="section-three.html">Layout Three</a></li>
+      <li><a href="section-four.html">Layout Four</a></li>
+      <li><a href="section-five.html">Layout Five</a></li>
+      <li><a href="section-six.html">Layout Six</a></li>
+    </ul>
+  </nav>
+
+  <h2>Layout Four</h2> <!-- Page heading -->
+
+  <!-- Layout Four: Text on left, two stacked images on right -->
+  <section class="layout-four">
+    <div class="text"> <!-- Text block -->
+      <h2>Farm Highlights</h2> <!-- Section heading -->
+      <p>
+        Get a closer look at daily life around the farm. From morning feeds 
+        to afternoon playtime, there’s always something happening.
+      </p> <!-- Description -->
+    </div>
+
+    <div class="right-images"> <!-- Image column -->
+      <div class="img-wrap">
+        <img src="images/farm-header.jpg" alt="Farm scene one"/> <!-- First image -->
+      </div>
+      <div class="img-wrap">
+        <img src="images/farm-header.jpg" alt="Farm scene two"/> <!-- Second image -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Code demonstration boxes -->
+  <div class="code-container">
+    <div class="code-box">
+      <h3>HTML Code</h3>
+      <pre><code>
+&lt;section class="layout-four"&gt;
+  &lt;div class="text"&gt;
+    &lt;h2&gt;Farm Highlights&lt;/h2&gt;
+    &lt;p&gt;Get a closer look at daily life...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="right-images"&gt;
+    &lt;div class="img-wrap"&gt;
+      &lt;img src="images/farm-header.jpg" alt="Farm scene one"&gt;
+    &lt;/div&gt;
+    &lt;div class="img-wrap"&gt;
+      &lt;img src="images/farm-header.jpg" alt="Farm scene two"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+      </code></pre>
+    </div>
+
+    <div class="code-box">
+      <h3>CSS Code</h3>
+      <pre><code>
+.layout-four {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.layout-four .text { width: 40%; }
+.layout-four .text h2 { color: brown; }
+.layout-four .text p { line-height: 1.6; }
+.layout-four .right-images { width: 40%; display: flex; flex-direction: column; }
+.layout-four .right-images .img-wrap { margin-bottom: 12px; }
+.layout-four .right-images .img-wrap:last-child { margin-bottom: 0; }
+.layout-four .right-images img { width: 100%; border-radius: 10px; }
+      </code></pre>
+    </div>
+  </div>
+</body>
+</html>
